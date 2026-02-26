@@ -1,0 +1,87 @@
+:root {
+  --bg: #0b0f1a;
+  --bg-soft: #111a2c;
+  --card: rgba(19, 29, 50, 0.55);
+  --text: #dce8ff;
+  --muted: #94a5cc;
+  --accent: #4cf3ff;
+  --accent-2: #7b61ff;
+  --danger: #ff5c7a;
+}
+
+html, body, #app {
+  background: radial-gradient(circle at 20% 20%, #142444 0%, var(--bg) 42%, #05070d 100%);
+  color: var(--text);
+}
+
+.slidev-layout {
+  background-image:
+    linear-gradient(rgba(76, 243, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(76, 243, 255, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-weight: 700;
+  color: #eff6ff;
+  text-shadow: 0 0 18px rgba(76, 243, 255, 0.32);
+}
+
+p, li {
+  color: var(--text);
+}
+
+.deck-subtitle {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.grid-2, .grid-3 {
+  display: grid;
+  gap: 14px;
+}
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid rgba(124, 153, 255, 0.25);
+  border-left: 3px solid var(--accent);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28), inset 0 0 30px rgba(77, 133, 255, 0.07);
+  backdrop-filter: blur(8px);
+}
+
+.stop-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 92, 122, 0.15);
+  border: 1px solid rgba(255, 92, 122, 0.5);
+  color: #ff9aae;
+  margin-left: 8px;
+}
+
+.three-col {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.three-col > div {
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(13, 20, 37, 0.7);
+  border: 1px solid rgba(123, 97, 255, 0.25);
+}
+
+.low-motion * {
+  transition: none !important;
+  animation: none !important;
+}
